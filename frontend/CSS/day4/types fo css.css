@@ -1,0 +1,52 @@
+.whole
+{
+    width: 100%;
+    background-image: url(image.jpg);    
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.black
+{
+    /* From https://css.glass */
+background: rgba(30, 20, 20, 0.53);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.1px);
+-webkit-backdrop-filter: blur(8.1px);
+border: 1px solid rgba(30, 20, 20, 0.32);
+width: 420px;
+height: 450px;
+
+ }
+ h2
+ {
+    display: flex;
+justify-content: center;
+padding-top: 100px;
+ }
+ img{
+    position: absolute;
+    left: 25%;
+    top: -22%;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+ }
+ input
+ {
+    
+border: none;
+background-color: transparent;
+border-bottom: 1px solid white ;
+color: white ;
+position: absolute;
+left: 28%;
+ }
