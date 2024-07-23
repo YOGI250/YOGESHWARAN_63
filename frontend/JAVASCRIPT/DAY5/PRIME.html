@@ -5,14 +5,13 @@
         function checkPrime() {
     var number= document.getElementById("n1").value;
     if (number< 1) {
-        document.getElementById("result").innerHTML = "Please enter a valid number greater than 0.";
+        document.getElementById("result").innerHTML = "Please enter a valid number greater than 1.";
         return;
     }
-    if(number = 1)
+    if(number == 1)
     {
         document.getElementById("result").innerHTML ="It is a Composite number";
-        return;    
-    }
+        }
     var isPrime=true;
     for (var i=2;i<=number/2;i++) {
         if (number%i==0) {
@@ -21,10 +20,10 @@
             }    
         }
     if (isPrime) {
-        document.getElementById("result").innerHTML=number+"is a prime number.";
+        document.getElementById("result").innerHTML=number+ "is a prime number.";
         }
     else {
-        document.getElementById("result").innerHTML=number+"is not a prime number.";
+        document.getElementById("result").innerHTML=number+" is not a prime number.";
         }
 }
     </script>
