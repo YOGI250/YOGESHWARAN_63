@@ -1,56 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function add(a,b){
-            let sum=a+b;
-            document.write("<b>sum :"+sum);
-        }
-        function sub(a,b){
-            let subtract=a-b;
-            document.write("<b>subtract:"+subtract);
-        }
-        function mul(a,b){
-            let mul=a^b;
-            document.write("<b>Multiple :"+sum);
-            }
-        function div(a,b){
-            let sum=a/b;
-            document.write("<b>division :"+sum);
-            }
-    </script>
-    <style>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <style>
         .container{
+            position: absolute;
+            left: 25%;
             display: flex;
-            height: 400px;
-            width: 240px;
+            height: 450px;
+            width: 250px;
             display: flex;
             flex-wrap: wrap;
             padding: 10px;
             gap: 3%;
             justify-content: center;
             align-items: center;
-            background-color: grey;
+            background-color: rgb(59, 55, 55);
+            border-radius: 10px;
         }
-        .search{
-            padding-left: 3px;
+        p{
+            font-size: 20px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            color: aliceblue;
+        }
+        #field{
+            padding-left: 5px;
             background-color: aliceblue;
             border: 2px solid black;
             width: 100%;
             height: 50px;
-            margin-top: 4px;
+            margin-top:1%;
             font-size: x-large;
+            border-radius: 10px;
+           
         }
         .btns{
             color: white;
             box-shadow: 1px 1px white;
             display: flex;
-            height: 45px;
-            width: 45px;
+            height: 47px;
+            width: 47px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             margin: 1px;
+             border: 2px solid black;
+             border-radius: 6px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+        }
+
+        .bttns{
+            color: white;
+            box-shadow: 1px 1px white;
+            display: flex;
+            height: 47px;
+            width: 47px;
             cursor: pointer;
             text-align: center;
             font-weight: 500;
@@ -60,37 +71,61 @@
             align-items: center;
              margin: 0.1px;
              border: 2px solid black;
-             border-radius: 3px;
-            background-color: rgb(79, 227, 230);
+             border-radius: 6px;
+            background-color: rgb(255, 145, 0);
+            border-radius: 50%;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="search">0</div>
-        <br>
-        
-            <div class="btns">C</div>
-            <div class="btns">%</div>
-            <div class="btns"><=</div>
-            <div class="btns">/</div>
-            <div class="btns">7</div>
-            <div class="btns">8</div>
-            <div class="btns">9</div>
-            <div class="btns">*</div>
-            <div class="btns">4</div>
-            <div class="btns">5</div>
-            <div class="btns">6</div>
-            <div class="btns">-</div>
-            <div class="btns">1</div>
-            <div class="btns">2</div>
-            <div class="btns">3</div>
-            <div class="btns">+</div>
-            <div class="btns">00</div>
-            <div class="btns">0</div>
-            <div class="btns">.</div>
-            <div class="btns">=</div>
-        
-    </div>
-</body>
+        .bttns:hover{
+            color:rgb(0, 0, 0);
+        }
+        .btns:hover{
+            color: rgb(255, 119, 0);
+        }
+        </style>
+       
+        <script>
+            function clearField(){
+                document.getElementById('field').value = '';
+            }
+            function inputValue(val){
+                document.getElementById('field').value+=val;
+            }
+            function backspace(){
+                let field =document.getElementById('field');
+                field.value = field.value.slice(0,-1);
+            }
+            function calculate(){
+                let field = document.getElementById('field');
+                let expression = field.value;
+                field.value=eval(expression);
+            }  
+             </script>
+        <div class="container">
+
+            <div class="search"><input type="text" name="display" id="field"></div>
+           
+                <div class="bttns" onclick="clearField()">AC</div>
+                <div class="bttns" onclick="backspace()">C</div>
+                <div class="bttns" onclick="inputValue('%')">%</div>
+                <div class="bttns" onclick="inputValue('/')">/</div>
+                <div class="btns" onclick="inputValue('7')">7</div>
+                <div class="btns" onclick="inputValue('8')">8</div>
+                <div class="btns" onclick="inputValue('9')">9</div>
+                <div class="bttns" onclick="inputValue('*')">*</div>
+                <div class="btns" onclick="inputValue('4')">4</div>
+                <div class="btns" onclick="inputValue('5')">5</div>
+                <div class="btns" onclick="inputValue('6')">6</div>
+                <div class="bttns" onclick="inputValue('-')">-</div>
+                <div class="btns" onclick="inputValue('1')">1</div>
+                <div class="btns" onclick="inputValue('2')">2</div>
+                <div class="btns" onclick="inputValue('3')">3</div>
+                <div class="bttns" onclick="inputValue('+')">+</div>
+                <div class="btns" onclick="inputValue('00')">00</div>
+                <div class="btns" onclick="inputValue('0')">0</div>
+                <div class="btns" onclick="inputValue('.')">.</div>
+                <div class="bttns" onclick="calculate()">=</div>
+           
+        </div>
+    </body>
+    
 </html>
