@@ -19,12 +19,6 @@
             background-color: rgb(59, 55, 55);
             border-radius: 10px;
         }
-        p{
-            font-size: 20px;
-            margin-bottom: 5px;
-            margin-top: 5px;
-            color: aliceblue;
-        }
         #field{
             padding-left: 5px;
             background-color: aliceblue;
@@ -56,7 +50,7 @@
             border-radius: 50%;
         }
 
-        .bttns{
+        .buttons{
             color: white;
             box-shadow: 1px 1px white;
             display: flex;
@@ -75,7 +69,7 @@
             background-color: rgb(255, 145, 0);
             border-radius: 50%;
         }
-        .bttns:hover{
+        .buttons:hover{
             color:rgb(0, 0, 0);
         }
         .btns:hover{
@@ -104,27 +98,26 @@
 
             <div class="search"><input type="text" name="display" id="field"></div>
            
-                <div class="bttns" onclick="clearField()">AC</div>
-                <div class="bttns" onclick="backspace()">C</div>
-                <div class="bttns" onclick="inputValue('%')">%</div>
-                <div class="bttns" onclick="inputValue('/')">/</div>
+                <div class="buttons" onclick="clearField()">AC</div>
+                <div class="buttons" onclick="backspace()">C</div>
+                <div class="buttons" onclick="inputValue('%')">%</div>
+                <div class="buttons" onclick="inputValue('/')">/</div>
                 <div class="btns" onclick="inputValue('7')">7</div>
                 <div class="btns" onclick="inputValue('8')">8</div>
                 <div class="btns" onclick="inputValue('9')">9</div>
-                <div class="bttns" onclick="inputValue('*')">*</div>
+                <div class="buttons" onclick="inputValue('*')">*</div>
                 <div class="btns" onclick="inputValue('4')">4</div>
                 <div class="btns" onclick="inputValue('5')">5</div>
                 <div class="btns" onclick="inputValue('6')">6</div>
-                <div class="bttns" onclick="inputValue('-')">-</div>
+                <div class="buttons" onclick="inputValue('-')">-</div>
                 <div class="btns" onclick="inputValue('1')">1</div>
                 <div class="btns" onclick="inputValue('2')">2</div>
                 <div class="btns" onclick="inputValue('3')">3</div>
-                <div class="bttns" onclick="inputValue('+')">+</div>
+                <div class="buttons" onclick="inputValue('+')">+</div>
                 <div class="btns" onclick="inputValue('00')">00</div>
                 <div class="btns" onclick="inputValue('0')">0</div>
                 <div class="btns" onclick="inputValue('.')">.</div>
-                <div class="bttns" onclick="calculate()">=</div>
-           
+                <div class="buttons" onclick="calculate()">=</div>
         </div>
     </body>
     
