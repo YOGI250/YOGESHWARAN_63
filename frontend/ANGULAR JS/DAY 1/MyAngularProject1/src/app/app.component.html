@@ -1,10 +1,12 @@
-<h1>Structural and Attribute Directives Example</h1>
-<br>
-<button (click)="changeFlag()">change</button>
-<div *ngIf="flag">
-  <br>
-  <ul>
-  <li *ngFor="let vec of vehicles">{{vec}}</li>
-  </ul>
-  <br>
+<table width ="80%" align="center">
+<tr>
+  <th><a routerLink="home"></a></th>
+  <th><a routerLink="contact"></a></th>
+  <th><a routerLink="About"></a></th>
+</tr>
+</table>
+
+<div>
+  This is the space for New Component
+  <router-outlet></router-outlet>
 </div>
